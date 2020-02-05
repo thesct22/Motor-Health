@@ -72,8 +72,8 @@ void loop()
   itoa(tem,tempstring,10);
   itoa(vib,vibstring,10);
   client.publish("/motor1/temp",tempstring);
-  client.publish("/motor1/vib",vibstring);
   delay(500);
+  client.publish("/motor1/vib",vibstring);
   // Check if any message were received on the topic we subsrcibed to
   client.poll();
 }
